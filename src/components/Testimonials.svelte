@@ -4,7 +4,7 @@
     export let testimonials = [
         {
             name: 'Greg Morgan',
-            title: 'Greg Moran, Co-founder & CEO, Zoomcar',
+            title: 'Co-founder & CEO, Zoomcar',
             content: 'Ravi is a high energy individual who was a high impact contributor from his earliest days at Zoomcar. He always took initiative and was eager to learn new skills and approaches to design as his tenure evolved. He was also a great team player'
         }
     ];

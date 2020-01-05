@@ -1,4 +1,11 @@
+<script>
+    import Testimonials from './Testimonials.svelte'
+    export let segment;
+</script>
 <footer>
+    {#if segment === undefined}
+        <Testimonials />
+    {/if}
     <nav>
         <ul>
             <li>
@@ -32,8 +39,22 @@
         background-color: #0d48a2;
         color: #FFF;
         min-height: 190px;
+        padding: 4rem 1rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(
+            0 0,
+            100% 10%,
+            100% 100%,
+            0 100%
+        );
+    }
+
+    footer > * {
+        width: 70vw;
+        display: flex;
         align-items: center;
         justify-content: center;
     }

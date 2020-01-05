@@ -1,3 +1,6 @@
+<script>
+	import Projects from '../components/Projects.svelte';
+</script>
 <style>
 	#introduction {
 		text-align: center;
@@ -23,13 +26,4 @@
 	</p>
 </section>
 
-<section>
-</section>
-
-<section>
-	<h2>
-		People who trust me with their hearts.
-	</h2>
-	<h4>Greg Moran, Co-founder & CEO, Zoomcar</h4>
-	<p>Ravi is a high energy individual who was a high impact contributor from his earliest days at Zoomcar. He always took initiative and was eager to learn new skills and approaches to design as his tenure evolved. He was also a great team player</p>
-</section>
+<Projects />

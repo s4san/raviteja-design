@@ -1,7 +1,3 @@
-<script>
-	export let segment;
-</script>
-
 <style>
 	ul {
 		display: flex;

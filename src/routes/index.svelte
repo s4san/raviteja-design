@@ -17,6 +17,11 @@
 	.strike {
 		text-decoration: line-through;
 	}
+
+	.decorative {
+		font-family: fantasy;
+		color: #ffc10c;
+	}
 </style>
 
 <section id="introduction">
@@ -24,7 +29,9 @@
 		Hello, I am Raviteja Puppala.
 	</h1>
 	<p>
-		I Create Better Experiences For <span class="strike">Users</span> People
+		I Create Better Experiences For
+		<span class="strike">Users</span>
+		<span class="decorative"> People</span>
 	</p>
 </section>
 

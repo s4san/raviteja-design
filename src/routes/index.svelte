@@ -2,16 +2,18 @@
 	import Projects from '../components/Projects.svelte';
 </script>
 <style>
-	#introduction {
+	section {
 		text-align: center;
 	}
-	#introduction > h1 {
+
+	section > h1 {
 		font-size: 2rem;
 		color: #38b8ff;
 	}
-	#introduction > p {
+	section > p {
 		font-size: 1.75rem;
 	}
+
 	.strike {
 		text-decoration: line-through;
 	}

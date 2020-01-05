@@ -5,7 +5,7 @@
 	}
 
 	li:not(:last-child) {
-		margin-right: 16px;
+		margin-right: 1rem;
 	}
 </style>
 

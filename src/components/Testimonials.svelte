@@ -23,12 +23,12 @@
 <style>
     h2 {
         text-align: center;
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-bottom: 3rem;
     }
     p {
         margin: 1.5rem 0 3rem 0;
-        font-size: 12px;
+        font-size: 0.75rem;
         opacity: 0.41;
         text-align: center;
     }

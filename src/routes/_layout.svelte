@@ -8,16 +8,8 @@
 <style>
 	header, main {
 		background: #FFF;
-	}
-
-	header {
 		margin-right: 4rem;
 		margin-left: 1.5rem;
-	}
-
-	main {
-		width: 70vw;
-		margin: 0 auto;
 	}
 
 	header {

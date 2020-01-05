@@ -11,12 +11,12 @@
 </div>
 <style>
     div {
-        width: 600px;
+        max-width: 40rem;
     }
     h4 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 </style>

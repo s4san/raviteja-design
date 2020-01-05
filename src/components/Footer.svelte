@@ -38,7 +38,7 @@
     footer {
         background-color: #0d48a2;
         color: #FFF;
-        min-height: 190px;
+        min-height: 12rem;
         padding: 4rem 1rem;
         display: flex;
         flex-direction: column;
@@ -78,8 +78,8 @@
     }
 
     a > img {
-        width: 30px;
-        height: 30px;
+        width: 2rem;
+        height: 2rem;
     }
 
     p {

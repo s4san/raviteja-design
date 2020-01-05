@@ -19,9 +19,10 @@
     section {
         margin: 4rem 0;
         display: grid;
-        grid-gap: 12px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, calc((70vw - 24px) / 3 / 1.69));
+        justify-content: center;
+        grid-gap: 0.75rem;
+        grid-template-columns: repeat(auto-fill, 20rem);
+        grid-auto-rows: calc(20rem / 1.69);
     }
 
     a {

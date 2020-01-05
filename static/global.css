@@ -19,3 +19,9 @@ h1 {
 a {
 	color: inherit;
 }
+
+@media (max-width: 480px) {
+	:root, html {
+		font-size: 12px;
+	}
+}

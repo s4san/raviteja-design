@@ -42,8 +42,14 @@
         display: grid;
         justify-content: center;
         grid-gap: 0.75rem;
-        grid-template-columns: repeat(auto-fill, 20rem);
+        grid-template-columns: repeat(3, 20rem);
         grid-auto-rows: calc(20rem / 1.69);
+    }
+
+    @media (max-width: 900px) {
+        section {
+            grid-template-columns: repeat(auto-fill, 20rem);
+        }
     }
 
     figcaption {

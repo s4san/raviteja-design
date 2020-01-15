@@ -17,6 +17,10 @@
 		align-items: center;
 		justify-content: space-between;
 	}
+
+	h2 {
+		font-size: 1.25rem;
+	}
 </style>
 
 <svelte:head>
@@ -24,7 +28,9 @@
 </svelte:head>
 
 <header>
-	<h2>Raviteja Puppala</h2>
+	<a href="/">
+		<h2>Home</h2>
+	</a>
 	<Nav/>
 </header>
 <main>

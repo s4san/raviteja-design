@@ -1,3 +1,7 @@
+<script>
+	export let segment
+</script>
+
 <style>
 	ul {
 		display: flex;
@@ -11,9 +15,9 @@
 
 <nav>
 	<ul>
-		<li>About</li>
-		<li>Resume</li>
-		<li>Contact</li>
+		<li>
+			<a class:selected='{segment === "resume"}' href="/project?p=resume">Resume</a>
+		</li>
 	</ul>
 	<!-- <ul>
 		<li><a class:selected='{segment === undefined}' href='.'>home</a></li>

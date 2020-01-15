@@ -6,10 +6,6 @@
 		text-align: center;
 	}
 
-	section > h1 {
-		font-size: 2rem;
-		color: #38b8ff;
-	}
 	section > p {
 		font-size: 1.75rem;
 	}

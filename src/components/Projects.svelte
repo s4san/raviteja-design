@@ -1,28 +1,40 @@
 <section>
-    <a href="">
+    <a href="/project?p=lmd">
         <figure>
             <img src="lmd-logo.svg" alt="LMD Logo">
             <figcaption>Last Mile Delivery</figcaption>
         </figure>
     </a>
-    <a href="">
+    <a href="/project?p=qplum">
         <figure>
             <img src="qplum.jpg" alt="Qplum Logo">
             <figcaption>Qplum</figcaption>
         </figure>
     </a>
-    <a href="">
+    <a href="/project?p=zoomcar">
         <figure>
             <img src="zoomcar.png" alt="Zoomcar Logo">
             <figcaption>Zoomcar</figcaption>
         </figure>
     </a>
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
+    <a href="/project?p=lenskart">
+        <figure>
+            <img src="lenskart.svg" alt="Lenskart Logo">
+            <figcaption>Lenskart Design</figcaption>
+        </figure>
+    </a>
+    <a href="/project?p=idea">
+        <figure>
+            <img src="idea.svg" alt="Idea Design Workshop">
+            <figcaption>Idea Design Workshop</figcaption>
+        </figure>
+    </a>
+    <a href="/project?p=logo">
+        <figure>
+            <img src="logo.svg" alt="Logo Design">
+            <figcaption>Logo Design</figcaption>
+        </figure>
+    </a>
 </section>
 <style>
     section {
@@ -53,6 +65,11 @@
         justify-content: center;
     }
 
+    figure {
+        margin: 0;
+        margin-block: 0;
+    }
+
     a:first-child {
         background-color: #7ab83166;
     }
@@ -63,5 +80,22 @@
 
     a:nth-child(3) {
         background-color: #e0f0ce;
+    }
+
+    a:nth-child(4) {
+        background-color: #3b9f954d;
+    }
+
+    a:nth-child(5) {
+        background-color: rgba(31, 61, 145, 0.2);
+    }
+
+    a:nth-child(5) > figure {
+        width: 85px;
+        height: 85px;
+    }
+
+    a:nth-child(6) {
+        background-color: #b620e02e;
     }
 </style>

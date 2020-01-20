@@ -1,58 +1,39 @@
 <script>
     import { onMount } from 'svelte';
     import { getContext } from 'svelte';
+    import pdfjs from "@bundled-es-modules/pdfjs-dist/build/pdf";
+    import viewer from "@bundled-es-modules/pdfjs-dist/web/pdf_viewer";
+
+    pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.worker.min.js";
     let { title, url } = getContext('project');
-    let loaded = false;
-
-    export async function setupPdfJS() {
-        function removeLoader() {
-            const divs = document.querySelectorAll('#loader');
-            divs.forEach(div => {
-                if (div) {
-                    div.style.display = 'none';
-                }
-            });
-        }
-        try {
-            if (typeof window !== 'undefined') {
-                const root = document.getElementById('pdf');
-                pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.3.200/pdf.worker.min.js';
-                const loadingTask = pdfjsLib.getDocument(url);
-                const pdf = await loadingTask.promise;
-                const pages = pdf.numPages;
-                loaded = true;
-                for (let i = 1; i <= pages; ++i) {
-                    const page = await pdf.getPage(i);
-                    const scale = window.devicePixelRatio || 1.5;
-                    const viewport = page.getViewport({ scale: scale });
-                    //
-                    // Prepare canvas using PDF page dimensions
-                    //
-                    const canvas = document.createElement('canvas');
-                    root.append(canvas);
-                    const context = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-
-                    //
-                    // Render PDF page into canvas context
-                    //
-                    const renderContext = {
-                        canvasContext: context,
-                        viewport: viewport,
-                    };
-                    page.render(renderContext);
-                }
-                removeLoader();
+    function removeLoader() {
+        const divs = document.querySelectorAll('#loader');
+        divs.forEach(div => {
+            if (div) {
+                div.style.display = 'none';
             }
-        } catch (e) {}
+        });
+    }
+    async function init() {
+        const root = document.getElementById('pdf');
+        const container = root.appendChild(document.createElement('div'));
+        container.appendChild(document.createElement('div'));
+        const pdfViewer = new viewer.PDFViewer({
+            container: container,
+            renderer: 'svg',
+            textLayerMode: 0
+        });
+        document.addEventListener("pagesinit", function() {
+            // We can use pdfViewer now, e.g. let's change default scale.
+            pdfViewer.currentScaleValue = "page-width";
+        });
+        const loadingTask = pdfjs.getDocument(url);
+        const pdf = await loadingTask.promise;
+        pdfViewer.setDocument(pdf);
+        removeLoader();
     }
 
-    onMount(() => {
-        if (!loaded) {
-            setupPdfJS();
-        }
-    })
+    onMount(init);
 </script>
 <style>
     div {
@@ -68,5 +49,4 @@
 </style>
 <div id="pdf">
     <h1>{title}</h1>
-    <script id="pdfjs" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.3.200/pdf.min.js" on:load={setupPdfJS}></script>
 </div>

@@ -9,22 +9,22 @@
     <nav>
         <ul>
             <li>
-                <a href="/">
+                <a href="https://dribbble.com/Ravitejapuppala" rel="nofollow noopener" title="Dribbble profile">
                     <img src="dribbble.svg" alt="Dribbble">
                 </a>
             </li>
             <li>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/ravitejapuppala/" rel="nofollow noopener" title="LinkedIn Profile">
                     <img src="linkedin.svg" alt="LinkedIn">
                 </a>
             </li>
             <li>
-                <a href="/">
+                <a href="https://twitter.com/Ravytez" rel="nofollow noopener" title="Twitter Profile">
                     <img src="twitter.svg" alt="Twitter">
                 </a>
             </li>
             <li>
-                <a href="/">
+                <a href="https://www.instagram.com/ravy_tezz/" rel="nofollow noopener" title="Instagram Profile">
                     <img src="instagram.svg" alt="Instagram">
                 </a>
             </li>

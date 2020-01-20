@@ -1,6 +1,5 @@
 <script>
     import { onMount, setContext } from 'svelte';
-    import Project from '../components/Project.svelte';
 
     const PROJECT_DATA = {
         zoomcar: {
@@ -48,8 +47,14 @@
             url: ''
         });
     }
+    let Project;
+
+	onMount(async () => {
+		const module = await import('../components/Project.svelte');
+		Project = module.default;
+	});
 </script>
-<Project loaded={false}/>
+<svelte:component this={Project} loaded={false}/>
 <div id="loader" style="position: relative; min-height: 400px;">
     <div class="loading"></div>
 </div>

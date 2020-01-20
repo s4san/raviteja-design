@@ -6,6 +6,7 @@
 	ul {
 		display: flex;
 		list-style: none;
+		margin: 0;
 	}
 
 	li:not(:last-child) {
